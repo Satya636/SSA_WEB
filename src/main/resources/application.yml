@@ -1,0 +1,31 @@
+#cfg server port
+server:
+  port: 2626
+  
+#cfg datasource properties  
+spring:
+  datasource:
+   username: scott
+   password: sys
+   driver-class-name: oracle.jdbc.driver.OracleDriver 
+   url: jdbc:oracle:thin:@localhost:1521:orcl
+ 
+    
+#cfg jpa properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      show-sql: true
+      format_sql: true
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        
+#cfg view resolver
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+        
+       
+ 
